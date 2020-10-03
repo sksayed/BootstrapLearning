@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
   <link rel="stylesheet" href="css/hello.css" />
+
 </head>
 
 <body>
@@ -47,14 +50,15 @@
             </div>
         </ul>
       </div>
-
+      <!-- here is the class for login and register -->
       <div class="login-register ml-auto ">
         <ul class="navbar-nav  navbar-collapse collapse multi-collapse">
           <li class="nav-item">
             <a class="nav-link" href="#">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link" href="#registrationModal" data-toggle="modal"
+              data-target="#registrationModal">Register</a>
           </li>
         </ul>
       </div>
@@ -178,7 +182,7 @@
     </div>
 
   </section>
-<!-- devider -->
+  <!-- devider -->
   <div class="devider">
     <hr />
   </div>
@@ -188,28 +192,28 @@
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
-  
+
       <!-- Grid row -->
       <div class="row">
-  
+
         <!-- Grid column -->
         <div class="col-md-6 mt-mb-0 mt-3">
-  
+
           <!-- Content -->
           <h5 class="text-uppercase">Footer Content</h5>
           <p>Here you can use rows and columns to organize your footer content.</p>
-  
+
         </div>
         <!-- Grid column -->
-  
+
         <hr class="clearfix w-100 d-md-none pb-3">
-  
+
         <!-- Grid column -->
         <div class="col-md-3 mb-md-0 mb-3">
-  
+
           <!-- Links -->
           <h5 class="text-uppercase">Links</h5>
-  
+
           <ul class="list-unstyled">
             <li>
               <a href="#!">C#</a>
@@ -224,16 +228,16 @@
               <a href="#!">ANGULAR</a>
             </li>
           </ul>
-  
+
         </div>
         <!-- Grid column -->
-  
+
         <!-- Grid column -->
         <div class="col-md-3 mb-md-0 mb-3">
-  
+
           <!-- Links -->
           <h5 class="text-uppercase">Links</h5>
-  
+
           <ul class="list-unstyled">
             <li>
               <a href="#!">Home</a>
@@ -248,21 +252,54 @@
               <a href="#!">Demo</a>
             </li>
           </ul>
-  
+
         </div>
         <!-- Grid column -->
-  
+
       </div>
       <!-- Grid row -->
-  
+
     </div>
     <!-- Footer Links -->
-  
+
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
       <a href="/"> SheikhSayed.com</a>
     </div>
     <!-- Copyright -->
-  
+
   </footer>
   <!-- Footer -->
+
+  <!-- Here is Registration Modal -->
+  <div id="registrationModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title mx-auto">Registration Form</h4>
+        </div>
+        <div class="modal-body">
+          <!-- input the form here -->
+          <form>
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" class="form-control col-md-6" placeholder="Enter email as userName" id="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control col-md-6" placeholder="Enter password" id="pwd">
+            </div>
+            <!-- show the error here from server side -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="formSubmit">Submit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="js\form_validator.js"></script>
+</body>
