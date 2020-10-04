@@ -28,15 +28,15 @@
       <div class="main-tabs ">
         <ul class="navbar-nav navbar-collapse mr-auto collapse multi-collapse">
           <li class="nav-item">
-            <a href="./home.html" class="nav-link active"> Home </a>
+            <a href="home.php" id="homeLink" class="nav-link active"> Home </a>
           </li>
 
           <li class="nav-item">
-            <a href="./home.html" class="nav-link "> About Us </a>
+            <a href="home.php" class="nav-link "> About Us </a>
           </li>
 
           <li class="nav-item">
-            <a href="./home.html" class="nav-link "> Services </a>
+            <a href="home.php" class="nav-link "> Services </a>
           </li>
 
           <li class="nav-item dropdown">
@@ -287,6 +287,10 @@
               <input type="email" class="form-control col-md-6" placeholder="Enter email as userName" id="email">
             </div>
             <div class="form-group">
+              <label for="name">Name :</label>
+              <input type="input" class="form-control col-md-6" placeholder="Enter Name" id="name">
+            </div>
+            <div class="form-group">
               <label for="pwd">Password:</label>
               <input type="password" class="form-control col-md-6" placeholder="Enter password" id="pwd">
             </div>
@@ -295,7 +299,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" id="formSubmit">Submit</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" id="registrationModalClose" data-dismiss="modal">Close</button>
         </div>
       </div>
 
